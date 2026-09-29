@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Navratri Digital Pack</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fff8f2;
+    color:#35130a;
+    line-height:1.6;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#7b1200,#d94300,#ff9e00);
+    color:white;
+    text-align:center;
+    padding:55px 20px;
+}
+
+.badge{
+    display:inline-block;
+    background:white;
+    color:#c52d00;
+    padding:7px 18px;
+    border-radius:30px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    max-width:650px;
+    margin:auto;
+    font-size:18px;
+}
+
+.price{
+    font-size:34px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.old-price{
+    font-size:20px;
+    text-decoration:line-through;
+    opacity:.7;
+    margin-right:8px;
+}
+
+.btn{
+    display:inline-block;
+    border:0;
+    background:white;
+    color:#c52d00;
+    padding:14px 32px;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:45px 20px;
+}
+
+.section-title{
+    text-align:center;
+    color:#8d2100;
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+/* PRODUCT PREVIEW */
+.preview-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.preview-card{
+    background:white;
+    padding:10px;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    overflow:hidden;
+}
+
+.preview-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    display:block;
+    border-radius:12px;
+}
+
+.preview-card p{
+    text-align:center;
+    padding:12px 5px;
+    font-weight:bold;
+    font-size:17px;
+}
+
+/* PRODUCT DETAILS */
+.content-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
+}
+
+.product-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:20px;
+}
+
+.product-item{
+    background:#fff2e6;
+    padding:18px;
+    border-radius:12px;
+    font-size:17px;
+}
+
+/* FEATURES */
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.feature{
+    background:white;
+    padding:25px 15px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.feature-icon{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+/* HOW IT WORKS */
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.step{
+    background:white;
+    padding:25px 15px;
+    text-align:center;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.number{
+    width:45px;
+    height:45px;
+    margin:auto auto 12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#d63b00;
+    color:white;
+    border-radius:50%;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* BUY BOX */
+.buy-box{
+    background:linear-gradient(135deg,#8d1b00,#e34c00);
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+    border-radius:25px;
+}
+
+.buy-box h2{
+    font-size:32px;
+}
+
+.buy-box .btn{
+    margin-top:10px;
+}
+
+/* FAQ */
+.faq{
+    max-width:800px;
+    margin:auto;
+}
+
+details{
+    background:white;
+    margin-bottom:12px;
+    padding:18px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,.06);
+}
+
+summary{
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+    background:#2b0c05;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:31px;
+    }
+
+    .preview-grid,
+    .features,
+    .product-list{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .steps{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:480px){
+
+    .preview-grid,
+    .features,
+    .product-list,
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding:45px 15px;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .container{
+        padding:35px 15px;
+    }
+
+    .section-title{
+        font-size:25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="badge">
+        🌺 NAVRATRI SPECIAL
+    </div>
+
+    <h1>
+        माँ दुर्गा डिजिटल पैक
+    </h1>
+
+    <p>
+        Navratri और Durga Puja के लिए शानदार
+        Wallpapers, WhatsApp DP और Video Status का
+        Premium Digital Collection
+    </p>
+
+    <div class="price">
+        <span class="old-price">₹199</span>
+        ₹49
+    </div>
+
+    <a href="#buy" class="btn">
+        🛒 BUY NOW
+    </a>
+
+</section>
+
+
+<!-- ================= PREVIEW ================= -->
+
+<section class="container">
+
+    <h2 class="section-title">
+        🌺 Product Preview
+    </h2>
+
+    <div class="preview-grid">
+
+
+        <!-- IMAGE 1 -->
+
+        <div class="preview-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=800&q=85"
+                alt="Festival Digital Product">
+
+            <p>
+                🌺 Premium Wallpaper
+            </p>
+
+        </div>
+
+
+        <!-- IMAGE 2 -->
+
+        <div class="preview-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=85"
+                alt="Festival Wallpaper">
+
+            <p>
+                📱 WhatsApp DP
+            </p>
+
+        </div>
+
+
+        <!-- IMAGE 3 -->
+
+        <div class="preview-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?auto=format&fit=crop&w=800&q=85"
+                alt="Digital Wallpaper">
+
+            <p>
+                🖼️ 2K Wallpaper
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHAT YOU GET ================= -->
+
+<section class="container">
+
+    <h2 class="section-title">
+        📦 आपको क्या मिलेगा?
+    </h2>
+
+    <div class="content-box">
+
+        <p>
+            इस Navratri Digital Pack में आपको
+            माँ दुर्गा और Navratri से जुड़े शानदार
+            Digital Content मिलेंगे।
+        </p>
+
+        <div class="product-list">
+
+            <div class="product-item">
+                🌺 <b>100+</b> Durga Mata 2K Wallpapers
+            </div>
+
+            <div class="product-item">
+                📱 <b>50</b> Navratri WhatsApp DP
+            </div>
+
+            <div class="product-item">
+                🎬 <b>9 Days</b> Navratri Video Status
+            </div>
+
+            <div class="product-item">
+                ⚡ Instant Digital Download
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="container">
+
+    <h2 class="section-title">
+        ✨ Product Features
+    </h2>
+
+    <div class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🖼️
+            </div>
+
+            <h3>
+                2K Quality
+            </h3>
+
+            <p>
+                High Resolution Wallpapers
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                📱
+            </div>
+
+            <h3>
+                Mobile Friendly
+            </h3>
+
+            <p>
+                Mobile में आसानी से इस्तेमाल करें
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ⚡
+            </div>
+
+            <h3>
+                Instant Download
+            </h3>
+
+            <p>
+                Payment के बाद Digital Files प्राप्त करें
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="container">
+
+    <h2 class="section-title">
+        ⚡ कैसे मिलेगा?
+    </h2>
+
+    <div class="steps">
+
+        <div class="step">
+
+            <div class="number">
+                1
+            </div>
+
+            <h3>
+                Buy Now
+            </h3>
+
+            <p>
+                Product खरीदें
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="number">
+                2
+            </div>
+
+            <h3>
+                Payment
+            </h3>
+
+            <p>
+                Secure Payment करें
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="number">
+                3
+            </div>
+
+            <h3>
+                Download
+            </h3>
+
+            <p>
+                Download Page खोलें
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="number">
+                4
+            </div>
+
+            <h3>
+                Enjoy
+            </h3>
+
+            <p>
+                Digital Pack इस्तेमाल करें
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BUY ================= -->
+
+<section class="container" id="buy">
+
+    <div class="buy-box">
+
+        <h2>
+            🌺 Navratri Digital Pack
+        </h2>
+
+        <p>
+            100+ Wallpapers + 50 DP + 9 Days Video Status
+        </p>
+
+        <div class="price">
+            ₹49
+        </div>
+
+        <button
+            class="btn"
+            onclick="buyProduct()">
+
+            💳 BUY NOW
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= IMPORTANT ================= -->
+
+<section class="container">
+
+    <div class="content-box">
+
+        <h2>
+            📌 Important Information
+        </h2>
+
+        <br>
+
+        <p>
+            यह एक Digital Product है।
+            खरीदने के बाद आपको Digital Files
+            Download करने के लिए उपलब्ध कराई जाएंगी।
+        </p>
+
+        <br>
+
+        <p>
+            कोई Physical Product Courier द्वारा
+            नहीं भेजा जाएगा।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FAQ ================= -->
+
+<section class="container">
+
+    <h2 class="section-title">
+        ❓ Frequently Asked Questions
+    </h2>
+
+    <div class="faq">
+
+
+        <details>
+
+            <summary>
+                Payment के बाद Product कैसे मिलेगा?
+            </summary>
+
+            <p>
+                Payment successful होने के बाद
+                Download Page पर Digital Product
+                उपलब्ध कराया जाएगा।
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                क्या Mobile में Download कर सकते हैं?
+            </summary>
+
+            <p>
+                हाँ, Mobile और Computer दोनों में
+                Download किया जा सकता है।
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                क्या यह Physical Product है?
+            </summary>
+
+            <p>
+                नहीं। यह पूरी तरह Digital Product है।
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                क्या WhatsApp पर इस्तेमाल कर सकते हैं?
+            </summary>
+
+            <p>
+                हाँ, DP और Status को WhatsApp पर
+                इस्तेमाल किया जा सकता है।
+            </p>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026 Navratri Digital Pack
+
+</footer>
+
+
+<script>
+
+function buyProduct(){
+
+    alert(
+        "Razorpay Payment Gateway अगले Step में यहाँ Connect किया जाएगा।"
+    );
+
+}
+
+</script>
+
+
+</body>
+</html>
